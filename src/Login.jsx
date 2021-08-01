@@ -10,7 +10,7 @@ let Login = (props) => {
         let { displayName, email, uid, photoURL } = user;
 
         props.userHandler({ displayName, email, uid, photoURL });
-        console.log(user);
+        // console.log(user);
       } else {
         props.userHandler(user); // passing null
       }
