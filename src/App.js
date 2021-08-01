@@ -1,20 +1,27 @@
-import {BrowserRouter, Switch, Route, Router} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Login from "./Login";
+import View from "./View";
+import Create from "./Create";
+import { useState } from "react";
 function App() {
-  return(
-    <Router>
-      <Switch>
-      <Route to='/login'>
+  let [user, setUser] = useState(null);
 
-      </Route>
-      <Route to='/view'>
-
-      </Route>
-      <Route to='/new'>
-
-      </Route>
-      </Switch>
-    </Router>
-
+  return (
+    <>
+      <Router>
+        <Switch>
+          <Route path="/new">
+            <Create handleUser={setUser} user={user} />
+          </Route>
+          <Route path="/view">
+            <View user={user} />
+          </Route>
+          <Route path="/">
+            <Login user={user} userHandler={setUser} />
+          </Route>
+        </Switch>
+      </Router>
+    </>
   );
 }
 
