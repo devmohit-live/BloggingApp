@@ -8,6 +8,7 @@ let Form = (props) => {
   let [likes, setLikes] = useState(0);
 
   let submitForm = async () => {
+    console.log(props.user);
     if (title && postData) {
       let data = {
         title,

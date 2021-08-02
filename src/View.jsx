@@ -10,16 +10,13 @@ let View = (props) => {
       if (props.user) {
         let uid = "" + props.user.uid + "";
         let tmp = [];
-        await firestore
-          .collection("posts")
-          .where("uid", "==", uid)
-          .onSnapshot((querySnapshot) => {
-            querySnapshot.forEach((doc) => {
-              tmp.push(doc);
-              console.log(doc.data());
-            });
-            setPosts(tmp);
+        await firestore.collection("posts").onSnapshot((querySnapshot) => {
+          querySnapshot.forEach((doc) => {
+            if (doc.data().uid == uid) tmp.push(doc);
+            console.log(doc.data());
           });
+          setPosts(tmp);
+        });
       }
     };
     f();
