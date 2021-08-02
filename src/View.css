@@ -1,0 +1,14 @@
+#blogsPanel {
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+.welcome {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 8px;
+}
+.blogdetials {
+  font-weight: bold;
+  font-size: 1.2rem;
+}

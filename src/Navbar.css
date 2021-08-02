@@ -1,5 +1,8 @@
-a {
-  text-decoration: none;
-  outline: none;
-  text-decoration-line: none;
+#brand {
+  height: 30px;
+  width: 30px;
+}
+ ul {
+  display: flex !important;
+  justify-content: space-between !important;
 }

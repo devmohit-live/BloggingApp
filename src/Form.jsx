@@ -17,11 +17,11 @@ let Form = (props) => {
         uid,
       };
       console.log(data);
-      
+
       await firestore
         .collection("posts")
         .add({ title, postData, comments, likes, uid });
-        console.log("Success");
+      console.log("Success");
       setTitle("");
       setData("");
     }
