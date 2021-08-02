@@ -1,5 +1,5 @@
 import { auth, firestore } from "./firebase";
-import { Redirect } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 let View = (props) => {
   let [posts, setPosts] = useState(null);
@@ -41,6 +41,8 @@ let View = (props) => {
           >
             Logout
           </button>
+
+          <Link to="/create">Create</Link>
         </>
       ) : (
         <Redirect to="/" />

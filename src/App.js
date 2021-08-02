@@ -10,12 +10,14 @@ function App() {
     <>
       <Router>
         <Switch>
-          <Route path="/new">
-            <Create handleUser={setUser} user={user} />
-          </Route>
           <Route path="/view">
             <View user={user} />
           </Route>
+
+          <Route path="/create">
+            <Create user={user} />
+          </Route>
+
           <Route path="/">
             <Login user={user} userHandler={setUser} />
           </Route>
