@@ -33,8 +33,14 @@ let View = (props) => {
         <>
           <div className="welcome">
             <h1>{props.user.displayName}</h1>
-            {posts?(<p className="blogdetials">You have created : {posts.length} Blog</p>):("Loading!!")}
-            
+            {posts ? (
+              <p className="blogdetials">
+                You have created : {posts.length} Blog
+              </p>
+            ) : (
+              "Loading!!"
+            )}
+
             <Link to="/create">
               <button type="button" class="btn btn-primary">
                 <span>

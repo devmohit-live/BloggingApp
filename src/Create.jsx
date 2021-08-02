@@ -8,8 +8,7 @@ let Create = (props) => {
     <div>
       {props.user ? (
         <>
-          <h1>{props.user.uid}</h1>
-          <h2>{props.user.displayName}</h2>
+          <h2>Hello {props.user.displayName}</h2>
           <Form user={props.user} />
         </>
       ) : (

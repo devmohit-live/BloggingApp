@@ -61,7 +61,7 @@ let Form = (props) => {
           />
         </div>
 
-        <button className="btn btn-primary" onClick={submitForm}>
+        <button className="btn btn-primary mt-4" onClick={submitForm}>
           Submit
         </button>
       </form>
